@@ -1,0 +1,298 @@
+.card-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  .card-item {
+    max-width: 430px;
+    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    &__side {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2.5rem 8rem 0 rgba(19, 50, 104, 0.55);
+      transform: perspective(2000px) rotateY(0deg) rotateX(0deg) rotate(0deg);
+      transform-style: preserve-3d;
+      transition: all 0.7s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      backface-visibility: hidden;
+      height: 100%;
+
+      &.-front {
+        .card-item__focus {
+          position: absolute;
+          z-index: 31234;
+          border-radius: 0.5rem;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+          border: 1px solid $color-main-background;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #10285d;
+            height: 100%;
+            border-radius: 5px;
+            filter: blur(25px) brightness(2);
+            opacity: 0.4;
+          }
+
+          &.-active {
+            opacity: 1;
+          }
+        }
+        .card-item__cover {
+          position: absolute;
+          height: 100%;
+          background-color: $color-dark-background;
+          left: 0;
+          top: 0;
+          width: 100%;
+          border-radius: 15px;
+          overflow: hidden;
+          img {
+            max-width: 100%;
+            display: block;
+            max-height: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #968c8c4d;
+          }
+        }
+        .card-item__content {
+          font-family: "Source Code Pro", monospace;
+          padding: 25px 15px;
+          position: relative;
+          z-index: 4;
+          height: 100%;
+          user-select: none;
+          &--first-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            padding: 0 10px;
+
+            img.chip {
+              width: 60px;
+            }
+
+            .card-type {
+              height: 45px;
+              position: relative;
+              display: flex;
+              justify-content: flex-end;
+              max-width: 100px;
+              margin-left: auto;
+              width: 100%;
+              img {
+                max-width: 100%;
+                object-fit: contain;
+                max-height: 100%;
+                object-position: top right;
+              }
+            }
+          }
+          &--second-row {
+            height: 5rem;
+            font-weight: 500;
+            line-height: 50px;
+            color: #fff;
+            font-size: 27px;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+            /* width: 100%; */
+            box-sizing: content-box;
+          }
+          &--third-row {
+            color: $color-white;
+            display: flex;
+            align-items: flex-start;
+            & > label {
+              color: $color-white;
+              width: 100%;
+              max-width: calc(100% - 10.5rem);
+              padding: 1rem 1.5rem;
+              font-weight: 500;
+              display: block;
+              cursor: pointer;
+              & > span {
+                opacity: 0.7;
+                font-size: 13px;
+                margin-bottom: 6px;
+              }
+              div {
+                white-space: nowrap;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                span.card-holder-name-letter {
+                  font-size: 18px;
+                  line-height: 1;
+                  text-transform: uppercase;
+                }
+              }
+            }
+
+            .card-item__date {
+              flex-wrap: wrap;
+              font-size: 18px;
+              margin-left: auto;
+              padding: 10px;
+              display: inline-flex;
+              width: 80px;
+              white-space: nowrap;
+              flex-shrink: 0;
+              cursor: pointer;
+              label {
+                &:first-child {
+                  opacity: 0.7;
+                  font-size: 13px;
+                  padding-bottom: 6px;
+                  width: 100%;
+                }
+
+                &:not(:first-child) {
+                  position: relative;
+                  span {
+                    width: 22px;
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: perspective(2000px) rotateY(-180deg) rotateX(0deg)
+          rotate(0deg);
+        z-index: 2;
+        padding: 0;
+        height: 100%;
+        .card-item__cover {
+          transform: rotateY(-180deg);
+          position: absolute;
+          height: 100%;
+          background-color: $color-dark-background;
+          left: 0;
+          top: 0;
+          width: 100%;
+          border-radius: 15px;
+          overflow: hidden;
+          img {
+            max-width: 100%;
+            display: block;
+            max-height: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #968c8c4d;
+          }
+        }
+        .card {
+          &__band {
+            background: $card-band-background;
+            width: 100%;
+            height: 56px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+          }
+          &__cvv {
+            text-align: right;
+            position: relative;
+            z-index: 2;
+            padding: 30px 15px;
+            &--title {
+              padding-right: 10px;
+              font-size: 15px;
+              font-weight: 500;
+              color: $color-white;
+              margin-bottom: 5px;
+            }
+
+            &--band {
+              height: 4.5rem;
+              background: $color-white;
+              margin-bottom: 3rem;
+              text-align: right;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              padding-right: 1rem;
+              color: $color-text;
+              font-size: 1.8rem;
+              border-radius: 4px;
+              box-shadow: $box-shadow-active;
+
+              span.card-cvv-item {
+              }
+            }
+            &--type {
+              opacity: 0.7;
+              height: 45px;
+              position: relative;
+              display: flex;
+              justify-content: flex-end;
+              max-width: 100px;
+              margin-left: auto;
+              width: 100%;
+              img {
+                max-width: 100%;
+                object-fit: contain;
+                max-height: 100%;
+                object-position: top right;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.-active {
+      .card-item__side {
+        &.-front {
+          transform: perspective(1000px) rotateY(180deg) rotateX(0deg)
+            rotateZ(0deg);
+        }
+        &.-back {
+          transform: perspective(1000px) rotateY(0) rotateX(0deg) rotateZ(0deg);
+          // box-shadow: 0 20px 50px 0 rgba(81, 88, 206, 0.65);
+        }
+      }
+    }
+  }
+}

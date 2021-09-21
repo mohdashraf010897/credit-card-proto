@@ -1,0 +1,77 @@
+//fade - animation - classes
+.faded-enter {
+  position: relative;
+  opacity: 0.01;
+  left: 1em;
+  top: -0.5em;
+}
+
+.faded-enter.faded-enter-active {
+  opacity: 1;
+  left: 0em;
+  top: 0em;
+  transition: all 250ms ease-in;
+}
+
+.faded-leave {
+  position: relative;
+  opacity: 1;
+  bottom: 0em;
+}
+
+.faded-leave.faded-leave-active {
+  opacity: 0.01;
+  bottom: -1em;
+  transition: all 250ms ease-in;
+}
+
+//fade - animation - classes - type 1
+.faded-1-enter {
+  position: relative;
+  opacity: 0.01;
+  top: -0.5em;
+}
+
+.faded-1-enter.faded-1-enter-active {
+  opacity: 1;
+  top: 0em;
+  transition: all 250ms ease-in;
+}
+
+.faded-1-leave {
+  display: inline-block;
+  margin: 0;
+  width: 0;
+  opacity: 1;
+}
+
+.faded-1-leave.faded-1-leave-active {
+  opacity: 0;
+  transition: all 10ms ease-in;
+}
+
+// hop - animation - classes
+.hopped-enter {
+  position: relative;
+  opacity: 0.01;
+  top: 1em;
+}
+
+.hopped-enter.hopped-enter-active {
+  opacity: 1;
+  top: 0em;
+  transition: all 250ms ease-out;
+}
+
+.hopped-leave {
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  top: 0em;
+}
+
+.hopped-leave.hopped-leave-active {
+  opacity: 0.01;
+  top: -1em;
+  transition: all 250ms ease-out;
+}
