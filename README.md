@@ -17,7 +17,7 @@ The project aims to showcase my own skills :sunglasses:
 
 # Live Link :facepunch:
 
-[:link: https://weather-app-0108.netlify.app/](https://weather-app-0108.netlify.app/)
+[:link: https://mohdashraf010897-credit-card-proto.netlify.app/](https://mohdashraf010897-credit-card-proto.netlify.app/)
 
 ---
 
