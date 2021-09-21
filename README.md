@@ -6,7 +6,7 @@ The project is a prototype application which uses React.js as frontend library. 
 
 The project aims to showcase my own skills :sunglasses:
 
-https://www.loom.com/embed/75033a926507440faacb3577bac710e8
+https://www.loom.com/share/75033a926507440faacb3577bac710e8
 
 ##### Key Takeaways:
 
