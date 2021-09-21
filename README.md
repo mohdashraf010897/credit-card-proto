@@ -8,12 +8,12 @@ The project aims to showcase my own skills :sunglasses:
 
 ##### Key Takeaways:
 
-:dash: React App  
-:hatching_chick: React Animations Used  
-:white_check_mark: Appropriate Form Validation  
-:heart_eyes: No styling framework used here, all Hand-crafted (using `SASS(SCSS)`)  
-:hand: Error Boundaries for App level error handling :error  
-:no_entry_sign: 404 fallback for not found pages (incase someone tries to fiddle with :) )
+:dash: React App<br />
+:hatching_chick: React Animations Used <br />
+:white_check_mark: Appropriate Form Validation <br />
+:heart_eyes: No styling framework used here, all Hand-crafted (using `SASS(SCSS)`) <br />
+:hand: Error Boundaries for App level error handling :error <br />
+:no_entry_sign: 404 fallback for not found pages (incase someone tries to fiddle with :) )<br />
 
 # Live Link :facepunch:
 
